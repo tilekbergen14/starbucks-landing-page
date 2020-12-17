@@ -13,7 +13,6 @@
     --pink: #a56cc1;
 }
 body{
-    height: 100vh;
     color: var(--text-black);
 }
 
@@ -28,7 +27,6 @@ body{
     padding-top: 16px;
 }
 .active{
-    
     background-color: var(--green);
     padding: 5px 15px;
     border-radius: 16px;
@@ -57,11 +55,14 @@ header a{
     text-decoration: none;
     margin-left: 20px;
 }
+@media screen and (max-width: 500px){
+    header ul{
+        display: none;
+    }
+}
 /******** main section **********/
 section{
-    position: relative;
-    z-index: 3;
-    height: 70%;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,15 +123,44 @@ section .active{
     font-weight: bold;
     border-radius: 20px;
 }
+@media screen and (max-width: 900px){
+    section{
+        padding-top: 60px;
+        height: auto;
+        text-align: center;
+        width: 80%;
+    margin: 0 auto;
+    }
+    .section{
+        flex-wrap: wrap;
+    }
+    .text-box p{
+        width: 100%;
+    }
+    h2{
+        font-size: 2em;
+    }
+    .special-text{
+        font-size: 3rem;
+    }
+    .text-box{
+        flex-basis: 100%;
+    }
+    .image-box{
+        flex-basis: 100%;
+        padding: 60px 0;
+    }
+}
 /*********green circle***********/
+/*
 .circle{
     top: 0;
-    left: 0;
+    right: 0;
     height: 100%;
-    width: 100%;
+    width: 1080px;
     position: absolute;
     background-color: var(--pink);
-    clip-path: circle(900px at right 1100px);
+    clip-path: circle(600px at right 800px);
 }
 .yellow{
     background-color: var(--yellow);
@@ -138,19 +168,35 @@ section .active{
 .green{
     background-color: var(--green);
 }
+*/
 /***** footer **********/
+.footer{
+    height: 100px;
+    width: 100%;
+    background-color: indianred;
+}
 footer{
-    height: 15%;
-    position: fixed;
-    z-index: 4;
-    bottom: 0;
+    height: 100px;
     display: flex;
     width: 100%;
     justify-content: center;
 }
 
 .thumb{
+    position: relative;
+    z-index: 3;
     height: 100px;
     margin: 0 20px;
     cursor: pointer;
 }
+@media screen and (max-width: 900px){
+    .footer::before{
+        content: "hello";
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        background-color: indianred;
+        transform:skewY(5deg);
+    }
+}
+
