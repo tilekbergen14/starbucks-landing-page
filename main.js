@@ -1,7 +1,7 @@
 const thumbs = document.querySelectorAll('.thumb')
 const bigImg = document.querySelector('.big-img')
 const circle = document.querySelector('.circle')
-console.log(thumbs)
+
 thumbs.forEach((e) => {
     e.addEventListener('click', () =>{
         bigImg.src = e.src
